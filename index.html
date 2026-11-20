@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Compare a band’s stage requirements with a venue’s supply. Explore an interactive, fictional show advance using First Patch’s matching engine.">
+<title>First Patch · Show advance</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="engine/questionnaires.js"></script><script defer src="engine/matching.js"></script><script defer src="fixtures.js"></script><script defer src="app.js"></script>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="First Patch | Can this venue support this band?">
+<meta property="og:description" content="Compare an artist&#x27;s technical requirements with venue equipment. Change the inventory and see the show report update.">
+<meta property="og:url" content="https://abp2204.github.io/first-patch-showcase/">
+<meta property="og:image" content="https://abp2204.github.io/first-patch-showcase/media/social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="First Patch | Can this venue support this band?">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://abp2204.github.io/first-patch-showcase/">
+</head>
+<body>
+<header><div class="shell top"><span class="brand"><i class="logo" aria-hidden="true"></i>FIRST PATCH</span><span class="edition">SHOW PRODUCTION</span><span class="sample">Fictional show demo</span></div></header>
+<main>
+<section class="hero"><div class="shell lead">
+<div class="titleblock"><p class="eyebrow">ARTIST / VENUE ADVANCE</p><h1>Lake Signal<span class="at"> at </span><br>Union Room<span class="dot">.</span></h1><p class="dek">Two technical profiles. One report for soundcheck.</p></div>
+<div class="rack" role="img" aria-label="Monitor routing. Three mixes requested." id="rack">
+<div class="rail"><b>Monitor patch</b><span>OUTPUT BANK</span></div>
+<div class="line"><span>Mix 01</span><i></i><em></em><i></i><span>Out 01</span></div>
+<div class="line"><span>Mix 02</span><i></i><em></em><i></i><span>Out 02</span></div>
+<div class="line"><span>Mix 03</span><i></i><em></em><i></i><span id="last-output">Open</span></div>
+</div></div></section>
+<div class="shell workspace">
+<section class="config"><p class="eyebrow">PROFILES</p><h2>Compare the setup</h2>
+<div class="profile"><div class="profilehead"><h3>Lake Signal</h3><span class="mono">ARTIST</span></div>
+<dl><div><dt>Lineup</dt><dd>4-piece band</dd></div><div><dt>Monitor request</dt><dd>3 wedge mixes</dd></div><div><dt>Direct boxes</dt><dd>1 for bass · 2 for keys</dd></div></dl>
+</div>
+<div class="profile second"><div class="profilehead"><h3>Union Room</h3><span class="mono">VENUE</span></div><p class="hint">Change the house supply to update the report.</p>
+<label class="field" for="mixes">Monitor capacity</label><select id="mixes"><option value="one_mix">1 monitor mix</option><option value="two_mixes" selected>2 monitor mixes</option><option value="three_four">3–4 monitor mixes</option><option value="five_plus">5+ monitor mixes</option></select>
+<label class="toggle"><input type="checkbox" id="dis"><span>DI boxes listed in inventory</span></label></div>
+</section>
+<section class="results"><div class="reporthead"><div><p class="eyebrow">SHOW ADVANCE</p><h2>Readiness report</h2></div><span class="initials" aria-hidden="true">FP</span></div>
+<div class="counts" aria-live="polite" aria-atomic="true" id="counts"></div>
+<div id="priority"></div>
+<details class="rest"><summary>Other production checks <span id="other-count"></span></summary><div id="others"></div></details>
+</section></div></main>
+<footer><div class="shell"><span>First Patch · Independent live production</span><a href="https://github.com/abp2204/first-patch-showcase">View source on GitHub ↗</a></div></footer>
+<noscript>This demo needs JavaScript to compare the profiles.</noscript>
+</body></html>
